@@ -8,7 +8,8 @@ const app=express();
 const PORT = process.env.PORT || 5000
 
 app.use(cors({
-    origin:["http://localhost:3000"],
+    origin:["https://ttt-frontend.vercel.app"],
+    methods:["GET","POST"],
     credentials : true
 }));
 
@@ -19,11 +20,12 @@ app.use(cors({
 const httpServer = http.createServer(app);
 // io=socket.io(httpServer);
 
-const io = new Server(httpServer , {
-    cors: {
-        origin:["http://localhost:3000"],
-        credentials:true
-    }
+const io = new Server(server, {
+  cors:{
+    origin:"https://ttt-frontend.vercel.app",
+    methods:["GET","POST"],
+    credentials:true
+  }
 });
 
 let waitingPlayer=null;
