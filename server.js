@@ -8,7 +8,7 @@ const app=express();
 const PORT = process.env.PORT || 5000
 
 app.use(cors({
-    origin:["https://ttt-frontend.vercel.app"],
+    origin:["https://ttt-frontend-4p4mx7o2u-agam-patel14s-projects.vercel.app"],
     methods:["GET","POST"],
     credentials : true
 }));
@@ -22,7 +22,7 @@ const httpServer = http.createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "https://ttt-frontend.vercel.app",
+    origin: "https://ttt-frontend-4p4mx7o2u-agam-patel14s-projects.vercel.app",
     methods: ["GET", "POST"],
     credentials: true
   }
